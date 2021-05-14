@@ -1169,6 +1169,13 @@ classes = (
     CollectExternalFiles,
     )
 
+
+@persistent
+def save_hook(dummy):
+    print('save_hook')
+    getthemall(None)
+
+
 def register():
     for cls in classes:
         bpy.utils.register_class(cls)
@@ -1181,3 +1188,6 @@ def unregister():
 
 if __name__ == "__main__":
     register()
+
+    if not save_hook in bpy.app.handlers.save_pre:
+        bpy.app.handlers.save_pre.append(save_hook)
