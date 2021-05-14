@@ -445,7 +445,7 @@ def getimages(context):
     blendnom = os.path.splitext(blendnom2)[0]
 
     ### définir chemin folder ressources ###
-    ressourcesfolder = blendossier + "/" + "blends_ressources"
+    ressourcesfolder = blendossier + "/" + "resources"
 
     ### définir types de datablocks à récupérer ###
     image = bpy.data.images
@@ -535,7 +535,7 @@ def getclips(context):
     blendnom = os.path.splitext(blendnom2)[0]
 
     ### définir chemin folder ressources ###
-    ressourcesfolder = blendossier + "/" + "blends_ressources"
+    ressourcesfolder = blendossier + "/" + "resources"
 
     ### définir types de datablocks à récupérer ###
     clip = bpy.data.movieclips
@@ -648,7 +648,7 @@ def getlibraries(context):
     blendnom = os.path.splitext(blendnom2)[0]
 
     ### définir chemin folder ressources ###
-    ressourcesfolder = blendossier + "/" + "blends_ressources"
+    ressourcesfolder = blendossier + "/" + "resources"
 
     ### définir types de datablocks à récupérer ###
     lib = bpy.data.libraries
@@ -734,7 +734,7 @@ def getallstrips(context):
     blendnom = os.path.splitext(blendnom2)[0]
 
     ### définir chemin folder ressources ###
-    ressourcesfolder = blendossier + "/" + "blends_ressources"
+    ressourcesfolder = blendossier + "/" + "resources"
 
     ### créer compte rendu ###
     os.makedirs(ressourcesfolder, exist_ok=True)
@@ -936,7 +936,7 @@ def getcurrentscenestrips(context):
     blendnom = os.path.splitext(blendnom2)[0]
 
     ### définir chemin folder ressources ###
-    ressourcesfolder = blendossier + "/" + "blends_ressources"
+    ressourcesfolder = blendossier + "/" + "resources"
 
     scene = bpy.context.scene
     scname = scene.name
@@ -1147,7 +1147,7 @@ def getfonts(context):
     blendnom = os.path.splitext(blendnom2)[0]
 
     ### définir chemin folder ressources ###
-    ressourcesfolder = blendossier + "/" + "blends_ressources"
+    ressourcesfolder = blendossier + "/" + "resources"
 
     ### définir types de datablocks à récupérer ###
     font = bpy.data.fonts
