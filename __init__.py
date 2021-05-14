@@ -1263,7 +1263,7 @@ classes = (
 
 
 @persistent
-def save_hook(dummy):
+def run_caf_hook(dummy):
     print('save_hook')
     getthemall(None)
 
@@ -1280,8 +1280,8 @@ def unregister():
     bpy.types.TOPBAR_MT_file_external_data.remove(menu_draw)
 
 
+if run_caf_hook not in bpy.app.handlers.save_pre:
+    bpy.app.handlers.save_pre.append(run_caf_hook)
+
 if __name__ == "__main__":
     register()
-
-    if save_hook not in bpy.app.handlers.save_pre:
-        bpy.app.handlers.save_pre.append(save_hook)
